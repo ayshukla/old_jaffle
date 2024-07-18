@@ -8,7 +8,9 @@ models:
       - name: customer_id
         description: This is a unique identifier for a customer
         tests:
-          - unique
+          - unique: 
+              config:
+                warn_if: ">1"
           - not_null
 
       - name: first_name
